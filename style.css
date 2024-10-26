@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: royalblue;
+  padding: 10px 25px;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.top{
+  display: flex;
+}
+.filt{
+  width: 100% !important;
+  margin: 5px 0;
+}
+input[type="text"] {
+  padding: 5px;
+  width: calc(100% - 50px);
+  margin-right: 10px;
+  font-size: inherit;
+}
+input:focus::placeholder {
+  visibility: hidden;
+}
+input:focus + .btn {
+  transform: scale(0.89);
+  transition: 300ms;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding:0 10px;
+  min-height: 100vh;
+  flex-grow: 1;
+  background: rgba(65, 105, 225, 0.353);
+}
+ul {
+  list-style: none;
+}
+ul .empty {
+  text-align: center;
+  width: 100%;
+  text-decoration: none !important;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+p {
+  flex-grow: 1;
+  margin: 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 500px;
+}
+input[type="checkbox"] {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.btn {
+  height: 40px;
+  padding: 0 20px;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: green;
+}
+.delete {
+  height: 40px;
+  padding: 0 20px;
+  font-size: inherit;
+  background: transparent;
+  outline: none;
+  background: #ff2700;
+  border: none;
+}
+footer {
+  background: royalblue;
+  padding: 10px;
+  font-size: 1.5rem;
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+@media screen and (max-width:675px) {
+  input[type="checkbox"]{
+    width: 70px !important;
+  }
+  .delete {
+    padding: 0 10px;
+    font-size: 17px;
+    border-radius: 6px ;
+}
+}
